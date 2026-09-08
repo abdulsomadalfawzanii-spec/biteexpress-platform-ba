@@ -14,6 +14,7 @@ const allowedOrigins = [
   'https://biteexpress-platform-fe.vercel.app',
   'http://localhost:5173',
   'http://127.0.0.1:5173',
+  'https://biteexpress-platform-fe-beta.vercel.app'
 ].filter(Boolean);
 
 app.use(helmet({ crossOriginResourcePolicy: false }));
