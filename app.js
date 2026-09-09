@@ -12,6 +12,7 @@ const allowedOrigins = [
   ...(process.env.CLIENT_URL || '').split(',').map((origin) => origin.trim()),
   'https://biteexpress-platform-fe-beta.vercel.app',
   'https://biteexpress-platform-fe.vercel.app',
+  'https://biteexpress-plat-git-5ee64c-abdulsomadalfawzanii-1291s-projects.vercel.app',
   'http://localhost:5173',
   'http://127.0.0.1:5173',
   'https://biteexpress-platform-fe-beta.vercel.app'
