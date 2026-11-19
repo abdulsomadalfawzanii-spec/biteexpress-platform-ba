@@ -66,16 +66,15 @@ exports.createOrder = async (req, res) => {
 
     const savedOrder = await order.save();
 
-    // Notify the vendor of new order
+    
     await Notification.create({
       user: vendorDoc.user,
       title: 'New order received',
       message: `A new order has been placed for ${verifiedItems.length} item(s). Total: $${total.toFixed(2)}`,
       type: 'order',
       relatedOrder: savedOrder._id,
-    }).catch(() => {}); // Non-blocking
-
-    // Stripe integration when configured
+    }).catch(() => {}); 
+    
     if (stripeLib) {
       try {
         const paymentIntent = await stripeLib.paymentIntents.create({
